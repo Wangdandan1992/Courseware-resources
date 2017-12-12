@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+
+			/*
+				ES5.1的方法
+					push
+					join
+					splice
+					sort
+					concat
+					pop
+					unshift
+					shift
+					slice
+					reverse
+					
+					
+					forEach
+					map
+					filter
+
+					reduce
+					some
+					every
+
+
+				ES6的方法
+					find
+					findIndex
+			*/
+
+		</script>
+	</head>
+
+	<body>
+		<script>
+			// 循环 枚举 遍历
+			// 我们在循环一个数组，要的是什么？
+			// 1. 这个位置对应的值 2. 下标
+
+			let arr = ['miaov','ketang','leo'];
+			/*let f = arr.forEach(function (item,index){
+				console.log(item,index,1111);
+			});*/
+			/*
+				map(回调函数)
+					回到函数的参数：1. 每一项，2，下标
+				不影响原数组
+				map的返回值：
+					是一个新的数组，数组的每一项，回调函数的返回值
+			*/
+			/*let m = arr.map(function (item,index){
+				console.log(item,index);	
+				return 123;
+			})
+
+			console.log(m);
+			console.log(arr);*/
+
+			let arr2 = ['miaov','ketang','leo'];
+
+			// 给数组的每一项都拼接上一个1，并且放在新数组中
+			/*let newArr = [];
+
+			arr2.forEach(function (item){
+				newArr.push(item+1)	
+			})*/
+
+			let newArr = arr2.map(function (item){
+				return item + 1;	
+			})
+
+			console.log(newArr);
+
+
+
+		</script>
+	</body>
+</html>

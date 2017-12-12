@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+
+			/*
+				ES5.1的方法
+					push
+					join
+					splice
+					sort
+					concat
+					pop
+					unshift
+					shift
+					slice
+					reverse
+					
+					
+					forEach
+					map
+					filter
+
+					reduce
+					some
+					every
+
+
+				ES6的方法
+					find
+					findIndex
+
+				静态方法:
+					挂在函数上的方法，称之为静态方法
+
+				ES6的方法：
+					Array.from(类数组)是把类数组转成数组，就是把类数组的每一项给到新数组
+			*/
+
+			// {a:1} [1,2,3,4,5,6] function Date
+			/*
+				函数也是对象，它是可执行的对象
+			*/
+
+			/*function fn(){
+						
+			}
+
+			fn.miaov  = 10;  // 静态属性
+			fn.abc = function (){  // 静态方法
+					
+			}
+
+			console.dir(fn);*/
+
+			// 类数组arguments转成数组
+
+			function func(){
+				let a = Array.from(arguments)
+				console.log(a);
+			}
+
+			func(1,2,3,3,4,5,56,66,7,7,88,)
+
+
+		</script>
+	</head>
+
+	<body>
+		
+		<input type="checkbox" id="selectAll" />全选
+		<hr>
+		<div id="checkboxs">
+			<input type="checkbox"/>
+			<input type="checkbox"/>
+			<input type="checkbox"/>
+			<input type="checkbox"/>
+			<input type="checkbox"/>
+		</div>
+
+
+		<script>
+			
+			let  selectAll = document.getElementById('selectAll')
+			let  checkboxs = document.querySelectorAll('#checkboxs input');  // 类数组 NodeList
+			// NodeList上有一个方法 forEach
+
+			//let  checkboxss = document.getElementsByTagName('input');  // 类数组 HTMLCollection
+
+			// HTMLCollection上没有forEach方法
+
+
+			selectAll.onclick  = function (){
+				checkboxs.forEach( (item) => {
+					//console.log(this);
+					item.checked = this.checked
+				})	
+			}
+
+			checkboxs.forEach(function (item){
+				item.onclick = function (){
+					// 是否全都选中了呢？
+					/*let n = 0;	
+					checkboxs.forEach(function (item){
+						if(item.checked){
+							n++
+						}	
+					})*/
+					// selectAll.checked = n === checkboxs.length 
+
+					/*selectAll.checked = Array.from(checkboxs).filter(function (item){
+						return item.checked	
+					}).length === checkboxs.length;*/
+
+					
+				}	
+			})
+
+
+
+
+		</script>
+	</body>
+</html>

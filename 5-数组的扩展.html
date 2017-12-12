@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+
+			/*
+				ES5.1的方法
+					push
+					join
+					splice
+					sort
+					concat
+					pop
+					unshift
+					shift
+					slice
+					reverse
+					
+					
+					forEach
+					map
+					filter
+
+					reduce
+					some
+					every
+
+
+				ES6的方法
+					find
+					findIndex
+			*/
+
+		</script>
+	</head>
+
+	<body>
+		<script>
+			// 循环 枚举 遍历
+			// 我们在循环一个数组，要的是什么？
+			// 1. 这个位置对应的值 2. 下标
+
+			let arr = ['miaov','ketang','leo'];
+
+			/*for( var i = 0; i < arr.length; i++ ){
+				console.log(111);
+				console.log(1+1);
+				console.log(2+1);
+				console.log(111);
+				console.log(arr[i],i);
+			}*/
+			// 这个函数就是用来做循环
+			/*
+				forEach(回调函数)
+					回到函数会接受两个参数：
+						1. 循环的额每一项
+						2. 下标
+
+					返回值为undefined
+					不影响原数组
+					
+				for语句和forEach方法：
+					1. for循环可以选择开始和结束，forEach不可以
+					2. for循环内部可以停止for循环，forEach不可以
+			*/
+			let f = arr.forEach(function (item,index){
+				console.log(111);
+				console.log(1+1);
+				console.log(2+1);
+				console.log(111);
+				console.log(item,index,1111);
+			});
+
+			console.log(f);
+			console.log(arr);
+
+		</script>
+	</body>
+</html>

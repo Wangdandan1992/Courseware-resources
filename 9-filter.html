@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+
+			/*
+				ES5.1的方法
+					push
+					join
+					splice
+					sort
+					concat
+					pop
+					unshift
+					shift
+					slice
+					reverse
+					
+					
+					forEach
+					map
+					filter
+
+					reduce
+					some
+					every
+
+
+				ES6的方法
+					find
+					findIndex
+			*/
+
+		</script>
+	</head>
+
+	<body>
+		<button id="btn">小于30对的人</button>
+		<ul id="list">
+			<!-- <li>
+				<p>姓名：XXXX</p>
+				<p>性别：XXXX</p>
+				<p>年龄：XXXX</p>
+			</li>
+			<li>
+				<p>姓名：XXXX</p>
+				<p>性别：XXXX</p>
+				<p>年龄：XXXX</p>
+			</li>
+			<li>
+				<p>姓名：XXXX</p>
+				<p>性别：XXXX</p>
+				<p>年龄：XXXX</p>
+			</li> -->
+		</ul>
+
+		<script>
+
+			/*
+				filter(回掉函数)
+					回调函数的参数：1. 每一项，2.下标
+					返回值是一个新数组,回到函数返回值为true，就把循环的这一项放在新数组中，如果为fasle，就忽略。
+					对原数组没影响
+			*/
+
+			let arr = [1,2,3,43,4,5,6,7,8];
+			// 小于5的数，放在新数组中
+			/*let newArr = [];
+
+			for( var i = 0; i < arr.length; i++ ){
+				if(arr[i] < 5){
+					newArr.push(arr[i])
+				}
+			}*/
+
+			let newArr = arr.filter(function (item){
+				return item < 5	// 过滤的条件
+			})
+
+			console.log(newArr);
+
+
+			// 数据结构
+
+			let data = [
+				{
+					name: 'leo',
+					sex: '男',
+					age:20
+				},
+				{
+					name: 'leo',
+					sex: '男',
+					age:21
+				},{
+					name: 'leo',
+					sex: '男',
+					age:30
+				},
+				{
+					name: 'leo',
+					sex: '男',
+					age:35
+				},
+			]
+
+			data = data.filter(function (item){
+				return item.age < 30	
+			})
+
+
+			let m = data.map(function (item){
+				return `
+					<li>
+						<p>姓名：${item.name}</p>
+						<p>性别：${item.sex}</p>
+						<p>年龄：${item.age}</p>
+					</li>
+				`
+			}).join('')
+
+			console.log(m);
+
+			list.innerHTML = m;
+
+
+
+
+
+		</script>
+	</body>
+</html>

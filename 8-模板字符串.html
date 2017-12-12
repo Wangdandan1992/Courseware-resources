@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+
+			/*
+				ES5.1的方法
+					push
+					join
+					splice
+					sort
+					concat
+					pop
+					unshift
+					shift
+					slice
+					reverse
+					
+					
+					forEach
+					map
+					filter
+
+					reduce
+					some
+					every
+
+
+				ES6的方法
+					find
+					findIndex
+			*/
+
+		</script>
+	</head>
+
+	<body>
+		<button>小于30对的人</button>
+		<ul id="list">
+			<!-- <li>
+				<p>姓名：XXXX</p>
+				<p>性别：XXXX</p>
+				<p>年龄：XXXX</p>
+			</li>
+			<li>
+				<p>姓名：XXXX</p>
+				<p>性别：XXXX</p>
+				<p>年龄：XXXX</p>
+			</li>
+			<li>
+				<p>姓名：XXXX</p>
+				<p>性别：XXXX</p>
+				<p>年龄：XXXX</p>
+			</li> -->
+		</ul>
+
+		<script>
+
+			/*
+				模板字符串
+					"" '' 反引号``
+					语法：占位符${表达式}
+						只能写求出值的表达式
+						不能写语句：if for
+				
+			*/
+			let miaov = 'leo'
+			let html = `
+				<li>
+					<p>姓名：${miaov}</p>
+					<p>性别：${[1,2,3].map(function (){
+						return '男'
+					})}</p>
+					<p>年龄：${1+1}</p>
+				</li>
+			`
+
+			console.log(html);
+
+			// 数据结构
+
+			let data = [
+				{
+					name: 'leo',
+					sex: '男',
+					age:20
+				},
+				{
+					name: 'leo',
+					sex: '男',
+					age:21
+				},{
+					name: 'leo',
+					sex: '男',
+					age:30
+				},
+				{
+					name: 'leo',
+					sex: '男',
+					age:35
+				},
+			]
+
+			let m = data.map(function (item){
+				return `
+					<li>
+						<p>姓名：${item.name}</p>
+						<p>性别：${item.sex}</p>
+						<p>年龄：${item.age}</p>
+					</li>
+				`
+			}).join('')
+
+			console.log(m);
+
+			list.innerHTML = m;
+
+
+
+
+
+		</script>
+	</body>
+</html>

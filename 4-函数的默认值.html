@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title></title>
+		<style>
+			
+		</style>
+		<script>
+
+			/*
+				给函数参数写默认值
+			*/
+
+			// a是必选的，b是可选的，不传默认为1
+			/*function fn(a,...b){
+				if(!b[0]){
+					b = 1;
+				}
+				return a+b
+			}*/
+
+			/*function fn(a,b){
+				b = b || 1;  // 一旦b传入的解析的布尔值为false
+				return a+b
+			}*/
+			function fn(a=[],b=1){
+				
+				return a+b
+			}
+
+			console.log(fn(10));
+			console.log(fn(10,''));
+
+			console.log(fn(10,0));
+
+		</script>
+	</head>
+
+	<body>
+		
+	</body>
+</html>
